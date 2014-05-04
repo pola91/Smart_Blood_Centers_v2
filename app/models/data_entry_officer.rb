@@ -1,0 +1,2 @@
+class DataEntryOfficer < User
+end

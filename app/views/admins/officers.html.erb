@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<html lang="en">
+  <body id="page2">
+    <!-- header -->
+    <div class="bg">
+      <div class="main">
+        <header>
+          <%= render 'layouts/header' %>
+          <div class="row-2">
+            <nav>
+              <ul class="menu">
+                <li>
+                  <a class="active" href="/admins/officers" id="adminstrator_id">Officers</a>
+                </li>
+                <li class="last-item">
+                  <a href="/admins/blood_centers" id="bloodCenters_id">Blood Centers</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <!--[> content <]<div class="ic">More Website Templates  at TemplateMonster.com!</div>-->
+        <section id="content">
+          <div class="padding">
+            <div class="indent">
+              <div class="container">
+                <span class="profile label officer"><h3>Edit Officer</h3></span>
+              </div>
+              <div class="container">
+                <input class="textinput" type="text" id="search" style="vertical-align:baseline !important;"/>
+                <a href="#" class="myButton" style="margin-left: 30px;margin-top:-2px; vertical-align:baseline !important;">Search</a>
+              </div>
+              <%= form_for @user = User.last, :url => account_path do |f| %>
+          
+              <div class="CSSTableGenerator" style="margin-left: 0px;">
+                <table>
+                  <tr>
+                    <td>User Name</td><td>Name</td><td>Address</td><td>National ID</td><td>Gender</td>
+                  </tr>
+                  <tr>
+                     <td>
+                      <%= f.text_field :login , :style => "width: 90%;"%>
+                    </td>
+                    <td>
+                      <%= f.text_field :name  , :style => "width: 90%;"%>
+                    </td>
+                    <td>
+                      <%= f.text_field :address  , :style => "width: 90%;"%>
+                    </td>
+                    <td>
+                      <%= f.text_field :nationalID  , :style => "width: 90%;"%>
+                    </td>
+                    <td>
+                      <%= f.select(:gender, ['Male','Female'], {}, { :class => 'select' }) %>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="container">
+                <%= f.submit "Save",class: "myButton" %>
+                <%= f.submit "Delete",class: "myButton" %>
+              </div>
+              <% end %>
+              <div class="container">
+              <h3>Create New</h3>
+              <div class="select-style select-officer">
+                  
+              </div>
+              </div>
+              <br>
+            <%= form_for @user, :url => account_path do |f| %>
+            <%= f.select(:type, ['ManagerOfficer', 'DataEntryOfficer','AdminOfficer'], {}, { :class => 'select' }) %>
+            </br>
+            </br>
+            
+              <div class="CSSTableGenerator" style="margin-left: 0px;">
+                <table>
+                  <tr>
+                    <td>User Name</td><td>Password</td><td style="width: 20%;">Password Confirmation</td><td>Name</td><td>Address</td><td>National ID</td><td>Gender</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <%= f.text_field :login , :style => "width: 90%;"%>
+                    </td>
+                    <td>
+                      <%= f.password_field :password , :style => "width: 90%;"%>
+                    </td>
+                    <td>
+                      <%= f.password_field :password_confirmation , :style => "width: 90%;"%>
+                    </td>
+                    <td>
+                      <%= f.text_field :name  , :style => "width: 90%;"%>
+                    </td>
+                    <td>
+                      <%= f.text_field :address  , :style => "width: 90%;"%>
+                    </td>
+                    <td>
+                      <%= f.text_field :nationalID  , :style => "width: 90%;"%>
+                    </td>
+                    <td>
+                      <%= f.select(:gender, ['Male','Female'], {}, { :class => 'select' }) %>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <%= f.submit "Create",class: "myButton" %>
+            </div>
+            <% end %>
+          </div>
+        </section>
+      <!-- footer -->
+      <%= render 'layouts/footer' %>
+      </div>
+    </div>
+    <script type="text/javascript"> Cufon.now(); </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<html lang="en">
+  <body id="page2">
+    <!-- header -->
+    <div class="bg">
+      <div class="main">
+        <header>
+          <%= render 'layouts/header' %>
+      <div class="row-2">
+            <nav>
+              <ul class="menu">
+                <li>
+                  <a href="/data_entries/withdraw" id= "withdraw_id">Withdraw</a>
+                </li>
+                <li>
+                  <a class="active" href="/data_entries/donate" id="donate_id">Donate</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <!-- content -->
+        <div class="ic">
+          More Website Templates  at TemplateMonster.com!
+        </div>
+        <section id="content">
+          <div class="padding">
+            <div class="indent">
+              
+              <div class="container">
+              <span class="profile label">By:</span>
+              <div class="select-style">
+                <select>
+                  <option value="transfuse_by_nat_id">National ID</option>
+                  <option value="transfuse_by_user_name">Username</option>
+                </select>
+              </div>
+            </div>
+            <div class="container">
+              <span class="profile label">Recepient:</span>
+              <input class="textinput"  type="text" id="mobile_phone"/>
+             </div>
+                <!-- ***************************************** added table ********************************************************-->
+                <br>
+                <div class="CSSTableGenerator">
+                  <TABLE id="dataTable" width="150px" border="0">
+                    <TR>
+                      <TD class="donate_group">Group</TD>
+                      <TD class="donate_amount">Amount</TD>
+                    </tr>
+                    <tr>
+                      <TD>
+                      <select name="group" class="mySelect">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                      </select></TD>
+                      <TD style="width: 50%">
+                      <INPUT type="text" style="width: 100%"/>
+                      </TD>
+                    </TR>
+                  </TABLE>
+                </div>
+            </div>
+            <a  href="#" class="submit" onclick="document.getElementById('donate_form').submit()">Order !</a>
+            <br />
+            <br />
+            </form>
+          </div>
+        </section>
+      <!-- footer -->
+      <%= render 'layouts/footer' %>
+      </div>
+    </div>
+    <script type="text/javascript"> Cufon.now(); </script>
+  </body>
+</html>

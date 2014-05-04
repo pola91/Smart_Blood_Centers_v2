@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bloodID: 1
+  type: 
+  group: MyString
+  expirationDate: 2014-03-12 23:16:20
+  blood_center_id: 1
+
+two:
+  bloodID: 1
+  type: 
+  group: MyString
+  expirationDate: 2014-03-12 23:16:20
+  blood_center_id: 1

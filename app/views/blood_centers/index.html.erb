@@ -1,0 +1,27 @@
+<h1>Listing blood_centers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Centerid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blood_centers.each do |blood_center| %>
+      <tr>
+        <td><%= blood_center.centerID %></td>
+        <td><%= link_to 'Show', blood_center %></td>
+        <td><%= link_to 'Edit', edit_blood_center_path(blood_center) %></td>
+        <td><%= link_to 'Destroy', blood_center, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blood center', new_blood_center_path %>

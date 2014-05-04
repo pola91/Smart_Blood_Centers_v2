@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<html lang="en">
+  <body id="page2">
+    <!-- header -->
+    <div class="bg">
+      <div class="main">
+        <header>
+          <%= render 'layouts/header' %>
+          <div class="row-2">
+          <nav>
+            <ul class="menu">
+              <li><a href="/managers/view_reports" id="profile_id">View Reports</a></li>
+                        <li><a href="/managers/report_settings"   id="donate_id"> Report Settings</a></li>
+                        <li><a class="active" href="/managers/sent_requests"    id="transfuse_id">Sent Requests</a></li>
+                        <li><a href="/managers/recieved_requests" id="need_id">Recieved Requests</a></li>
+                         
+                        <!-- <li class="last-item"><a href="#log" id="log_id">Log</a></li>
+             -->
+            </ul>
+          </nav>
+        </div>
+      </header>
+<!-- content --><div class="ic">More Website Templates  at TemplateMonster.com!</div>
+      <section id="content">
+      <div class="padding">
+    <div class="indent">
+    <h2>Sent</h2>
+    <h4>Please Fill one of two fields below</h4>
+    <br />
+    <form id="donate_form" action="demo_form.asp">
+    
+    <br />
+    
+
+    <!-- ***************************************** added table ********************************************************-->
+
+    
+    <a href="javascript:addRow('dataTable');" value="Add Row" class="myButton margined" >Add Row</a>
+    <a href="javascript:deleteRow('dataTable');" value="Delete Row" class="myButton margined" >Delete Row</a>
+    <a href="javascript:deleteAll('dataTable');" value="Delete All" class="myButton" >Delete All</a>
+
+    <br>
+
+    <br>
+
+    <br>
+    <div class="CSSTableGenerator" >
+    <TABLE id="dataTable" width="350px" border="0">
+    <TR>
+    <TD class="check">Select </TD>
+    <TD class="counter">Counter</TD>
+    <TD class="group">Group</TD>
+    <TD>Type</TD>
+    <TD class="amount">Amount</TD>
+
+    
+    </tr>
+    <tr>
+    <TD style="vertical-align: middle;text-align: center;">
+    <INPUT type="checkbox" name="chk"/>
+    </TD>
+    <TD style="text-align: center;"> 1 </TD>
+    <TD>
+    <select name="group">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="AB">AB</option>
+    <option value="O">O</option>
+    </select>
+
+    </TD>
+    <TD>
+    <select name="type">
+    <option value="Cell">Cell</option>
+    <option value="Plazma">Plazma</option>
+    <option value="Platelets">Platelets</option>
+    </select>
+    </TD>
+    <TD>
+    <INPUT type="text" />
+    </TD>
+    </TR>
+    </TABLE>
+    </div>
+    </div>
+    <a  href="#" class="submit" onclick="document.getElementById('donate_form').submit()">Order !</a>
+    <br />
+    <br />
+    </form>
+    
+    </section>
+    
+  <!-- footer -->
+      <%= render 'layouts/footer' %>
+      </div>
+    </div>
+    <script type="text/javascript"> Cufon.now(); </script>
+  </body>
+</html>

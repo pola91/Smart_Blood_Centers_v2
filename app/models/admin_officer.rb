@@ -1,0 +1,2 @@
+class AdminOfficer < User
+end

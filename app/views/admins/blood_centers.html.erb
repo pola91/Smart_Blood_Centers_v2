@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<html lang="en">
+  <body id="page2">
+    <!-- header -->
+    <div class="bg">
+      <div class="main">
+        <header>
+            <%= render 'layouts/header' %>
+            <div class="row-2">
+            <nav>
+              <ul class="menu">
+                <li>
+                  <a href="/admins/officers" id="adminstrator_id">Officers</a>
+                </li>
+                <li class="last-item">
+                  <a class="active" href="/admins/blood_centers" id="bloodCenters_id">Blood Centers</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <!-- content -->
+        <section id="content">
+          <div class="padding">
+          <div class="indent">
+            <div class="container">
+              <h3>Edit Blood Center</h3>
+            </div>
+            <div class="container">
+              <input class="textinput" type="text" id="search" style="vertical-align:baseline !important;"/>
+              <a href="#" class="myButton" style="margin-left: 30px;margin-top:-2px; vertical-align:baseline !important;">Search</a>
+            </div>
+            <div class="CSSTableGenerator" style="margin-left: 0px;">
+              <table>
+                <tr>
+                  <td>Center ID</td><td>Location</td>
+                </tr>
+                <tr>
+                  <td contenteditable="true">N/A</td>
+                  <td contenteditable="true">N/A</td>
+                </tr>
+              </table>
+            </div>
+            <div class="container">
+              <a href="#" class="myButton">Save</a>
+              <a href="#" class="myButton">Delete</a>
+            </div>
+            <h3>Create New</h3>
+            <br />
+            <div class="CSSTableGenerator" style="margin-left: 0px;">
+              <table>
+                <tr>
+                  <td>Center ID</td><td>Location</td>
+                </tr>
+                <tr>
+                  <td>
+                  <input class="textinput" type="number" id="centerID" style="width: 97%;"/>
+                  </td>
+                  <td>
+                  <input class="textinput" type="number" id="centerLocation" style="width: 97%;"/>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <a href="#" class="myButton">Create</a>
+          </div>
+          </div>
+        </section>
+        <!-- footer -->
+        <%= render 'layouts/footer' %>
+      </div>
+    </div>
+    <script type="text/javascript"> Cufon.now(); </script>
+  </body>
+</html>

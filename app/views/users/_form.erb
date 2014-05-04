@@ -1,0 +1,40 @@
+<%= form.label :login %><br />
+<%= form.text_field :login %><br />
+<br />
+<%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
+<%= form.password_field :password %><br />
+<br />
+<%= form.label :password_confirmation %><br />
+<%= form.password_field :password_confirmation %><br />
+
+<%= form.label :name %><br />
+<%= form.text_field :name %><br />
+<br />
+
+<%= form.label :gender %><br />
+<%= form.select(:gender, ['Male','Female'], {}, { :class => 'select' }) %><br />
+<br />
+
+<%= form.label :address %><br />
+<%= form.text_field :address %><br />
+<br />
+
+<%= form.label :nationalID %><br />
+<%= form.text_field :nationalID %><br />
+<br />
+
+<%= form.label :mobile %><br />
+<%= form.text_field :mobile %><br />
+<br />
+
+<%= form.label :telephone %><br />
+<%= form.text_field :telephone %><br />
+<br />
+
+<%= form.label :dateOfBirth %><br />
+<%= form.date_field :dateOfBirth %><br />
+<br />
+<!--
+<%= form.label :type %><br />
+<%= form.select(:type, ['RegisteredUser','ManagerOfficer', 'DataEntryOfficer','AdminOfficer'], {}) %>
+-->

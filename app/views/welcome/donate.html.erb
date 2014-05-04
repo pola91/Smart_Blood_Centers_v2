@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<html lang="en">
+  <body id="page2">
+    <!-- header -->
+    <div class="bg">
+      <div class="main">
+        <header>
+          <%= render 'layouts/header' %>
+          <div class="row-2">
+            <nav>
+              <ul class="menu">
+                <li><a href="/home">Home Page</a></li>
+                <li><a class="active" href="/donate">Blood Donation</a></li>
+                <li><a href="/need">Find a Blood Center</a></li>
+                <li><a href="/learn_more">Learn more</a></li>
+                <li class="last-item"><a href="/contacts">Contact Us</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <section id="content">
+          <div class="padding">
+            <div class="indent">
+              <h2>Donate</h2>
+              <div class="indent4">
+                <div class="datagrid">
+                <div style="float:left">List</div>
+                <div id="map_canvas" style="float:right"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    <!-- footer -->
+      <%= render 'layouts/footer' %>
+      </div>
+    </div>
+    <script type="text/javascript"> Cufon.now(); </script>
+  </body>
+</html>

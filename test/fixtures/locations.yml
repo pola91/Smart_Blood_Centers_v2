@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  latitude: 1
+  longitude: 1
+  guest_id: 1
+  blood_center_id: 1
+
+two:
+  latitude: 1
+  longitude: 1
+  guest_id: 1
+  blood_center_id: 1

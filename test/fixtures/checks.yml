@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  checkNumber: 1
+  type: 
+  group: MyString
+  expirationDate: 2014-03-12 23:16:26
+  registered_user_id: 1
+
+two:
+  checkNumber: 1
+  type: 
+  group: MyString
+  expirationDate: 2014-03-12 23:16:26
+  registered_user_id: 1

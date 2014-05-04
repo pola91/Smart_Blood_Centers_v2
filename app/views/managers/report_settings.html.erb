@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<html lang="en">
+  <body id="page2">
+    <!-- header -->
+    <div class="bg">
+      <div class="main">
+        <header>
+          <%= render 'layouts/header' %>
+          <div class="row-2">
+          <nav>
+            <ul class="menu">
+            <li><a href="/managers/view_reports" id="profile_id">View Reports</a></li>
+                        <li><a class="active" href="/managers/report_settings"   id="donate_id">Report Settings</a></li>
+                        <li><a href="/managers/sent_requests"    id="transfuse_id">Sent Requests</a></li>
+                        <li><a href="/managers/recieved_requests" id="need_id">Recieved Requests</a></li>
+                         
+                        <!-- <li class="last-item"><a href="#log" id="log_id">Log</a></li>
+             -->
+            </ul>
+          </nav>
+        </div>
+      </header>
+<!--[> content <]<div class="ic">More Website Templates  at TemplateMonster.com!</div>--><!-- content --><div class="ic">More Website Templates  at TemplateMonster.com!</div>
+  <section id="content">
+    <div class="padding">
+      <div class="indent">
+        <h2>Report Settings</h2>
+                <div class="indent4">
+            <div class="container">
+                <span class="profile label">Center:</span>
+                <div class="select-style">
+                  <select>
+                    <option value="male">Shatbi</option>
+                    <option value="female">Research</option>
+                    <option value="female">Fever</option>
+                  </select>
+                </div>
+            </div>
+            <div class="container">
+              <span class="profile label">Start Date:</span>
+              <input class="textinput" type="date" name="bday" id="firstname">
+            </div>
+            <div class="container">
+              <span class="profile label">End Date:</span>
+              <input class="textinput" type="date" name="bday" id="firstname">
+            </div>
+            <div class="container">
+              <span class="profile label">Type:</span>
+              <div class="select-style">
+                <select>
+                  <option value="male">A</option>
+                  <option value="female">B</option>
+                  <option value="female">AB</option>
+                  <option value="female">O-</option>
+                </select>
+              </div>
+            </div>
+            <div class="container">
+              <span class="profile label">Retrieved Data:</span>
+              <div class="select-style">
+                <select>
+                  <option value="male">Consumption</option>
+                  <option value="female">Donation</option>
+                  <option value="female">Shortage or Excess</option>
+                </select>
+              </div>
+            </div>
+          
+            <a  href="#" class="submit" onclick="document.getElementById('donate_form').submit()">submit !</a>
+          </div>
+      </div>
+    </div>  
+    <br>
+  <br>
+  <br>
+  <br>
+  </section>
+  <!-- footer -->
+      <%= render 'layouts/footer' %>
+      </div>
+    </div>
+    <script type="text/javascript"> Cufon.now(); </script>
+  </body>
+</html>

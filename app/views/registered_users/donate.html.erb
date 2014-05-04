@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<html lang="en">
+  <body id="page2">
+    <!-- header -->
+    <div class="bg">
+      <div class="main">
+        <header>
+          <%= render 'layouts/header' %>
+          <div class="row-2">
+          <nav>
+            <ul class="menu">
+              <li><a href="/registered_users/profile">Profile</a></li>
+              <li><a class="active" href="/registered_users/donate">Donate</a></li>
+              <li><a href="/registered_users/need">Need</a></li>
+              <li><a href="/registered_users/transfuse">Transfuse</a></li>
+              <li class="last-item"><a href="/registered_users/log">Log</a></li>
+            </ul>
+          </nav>
+        </div>
+      
+        </header>
+    <section id="content">
+<div class="padding">
+<div class="indent">
+  <div class="indent4"> </div>
+  <div class="datagrid">
+    <div style="float:left">List</div>
+    <div id="map_canvas" style="float:right"></div>
+   <!-- <table>
+      <thead>
+        <tr>
+          <th>Sorted by Nearst</th>
+          <th>Map</th>
+          <th>Sorted by Availability</th>
+        </tr>
+      <thead>
+        <tr>
+          <td>row 2 column 1</td>
+          <td rowspan="3"><div id="map_canvas"></div></td>
+          <td>row 2 column 3</td>
+        </tr>
+        <tr>
+          <td>row 2 column 1</td>
+          <td>row 2 column 3</td>
+        </tr>
+        <tr>
+          <td>row 2 column 1</td>
+          <td>row 2 column 3</td>
+        </tr>
+    </table>-->
+  </div>
+</div>
+</div>
+</section>
+
+
+    <!-- footer -->
+      <%= render 'layouts/footer' %>
+      </div>
+    </div>
+    <script type="text/javascript"> Cufon.now(); </script>
+  </body>
+</html>

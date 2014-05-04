@@ -1,0 +1,2 @@
+class ManagerOfficer < User
+end
