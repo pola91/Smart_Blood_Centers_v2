@@ -1,6 +1,9 @@
-<h1>Register</h1>
+<div style="margin-left:20px;width:500px;height:850px;border:1px solid #000;border-radius:15px;background: #FFFFFF;padding:20px 30px 20px 30px;">
+	<h3>Register</h3>
+	<br />
 
-<%= form_for @user, :url => account_path do |f| %>
-  <%= render :partial => "form", :object => f %>
-  <%= f.submit "Register" %>
-<% end %>
+	<%= form_for @user, :url => account_path do |f| %>
+	  <%= render :partial => "form", :object => f %>
+	  <%= f.submit "Register", :class => 'save-btn register-btn'%>
+	<% end %>
+</div>

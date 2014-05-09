@@ -1,12 +1,26 @@
-<%= form_for @user_session, :url => user_session_path do |f| %>
-  
-  <%= f.label :login %><br />
-  <%= f.text_field :login %><br />
-  <br />
-  <%= f.label :password %><br />
-  <%= f.password_field :password %><br />
-  <br />
-  <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
-  <br />
-  <%= f.submit "Login" %>
-<% end %>
+<center>
+	<div style="width:500px;height:300px;border:1px solid #000;border-radius:25px;background: #FFFFFF;">
+		<%= form_for @user_session, :url => user_session_path do |f| %>
+		  
+		<div class="container">
+			<%= f.label :login , :class => "profile label"%>
+		  	<%= f.text_field :login , :class => "textinput"%>
+		</div>
+		<div class="container">
+		  <%= f.label :password , :class => "profile label"%>
+		  <%= f.password_field :password , :class => "textinput"%>
+		</div>
+		  <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
+		  <%= f.submit "Login", :class => "save-btn" %>
+		<% end %>
+		<br />
+		<% if !current_user %>
+  			<%= link_to "Register", new_account_path, :style => "color:black;"%> |
+  			<%= link_to "Log In", new_user_session_path , :style => "color:black;"%>
+		<% else %>
+  			<%= link_to "My Account", account_path %> |
+  <!--<%= link_to "Logout", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %>-->
+  			<%= link_to "Logout", user_session_path, :method => :delete %>
+		<% end %>
+	</div>
+</center>

@@ -1,39 +1,45 @@
-<%= form.label :login %><br />
-<%= form.text_field :login %><br />
-<br />
-<%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
-<%= form.password_field :password %><br />
-<br />
-<%= form.label :password_confirmation %><br />
-<%= form.password_field :password_confirmation %><br />
-
-<%= form.label :name %><br />
-<%= form.text_field :name %><br />
-<br />
-
-<%= form.label :gender %><br />
-<%= form.select(:gender, ['Male','Female'], {}, { :class => 'select' }) %><br />
-<br />
-
-<%= form.label :address %><br />
-<%= form.text_field :address %><br />
-<br />
-
-<%= form.label :nationalID %><br />
-<%= form.text_field :nationalID %><br />
-<br />
-
-<%= form.label :mobile %><br />
-<%= form.text_field :mobile %><br />
-<br />
-
-<%= form.label :telephone %><br />
-<%= form.text_field :telephone %><br />
-<br />
-
-<%= form.label :dateOfBirth %><br />
-<%= form.date_field :dateOfBirth %><br />
-<br />
+<div class="container register-container">
+	<%= form.label :login, :class => "profile label" %>
+	<%= form.text_field :login, :class => "textinput register-field" %>
+</div>
+<div class="container register-container">
+	<%= form.label :password, form.object.new_record? ? nil : "Change password" , :class => "profile label" %>
+	<%= form.password_field :password , :class => "textinput register-field"%>
+</div>
+<div class="container register-container">
+	<%= form.label :confirm_password , :class => "profile label" %>
+	<%= form.password_field :password_confirmation, :class => "textinput register-field" %>
+</div>
+<div class="container register-container">
+	<%= form.label :name, :class => "profile label"  %>
+	<%= form.text_field :name, :class => "textinput register-field" %>
+</div>
+<div class="container register-container">
+	<%= form.label :gender, :class => "profile label" %>
+	<div class="select-style">
+		<%= form.select(:gender, ['Male','Female'], {}, {}) %>
+	</div>
+</div>
+<div class="container register-container">
+	<%= form.label :address, :class => "profile label" %>
+	<%= form.text_field :address, :class => "textinput register-field" %>
+</div>
+<div class="container register-container">
+	<%= form.label :nationalID, :class => "profile label" %>
+	<%= form.text_field :nationalID, :class => "textinput register-field" %>
+</div>
+<div class="container register-container">
+	<%= form.label :mobile, :class => "profile label" %>
+	<%= form.text_field :mobile, :class => "textinput register-field" %>
+</div>
+<div class="container register-container">
+	<%= form.label :telephone, :class => "profile label" %>
+	<%= form.text_field :telephone, :class => "textinput register-field" %>
+</div>
+<div class="container register-container">
+	<%= form.label :dateOfBirth, :class => "profile label" %>
+	<%= form.date_field :dateOfBirth, :class => "textinput register-field" %>
+</div>
 <!--
 <%= form.label :type %><br />
 <%= form.select(:type, ['RegisteredUser','ManagerOfficer', 'DataEntryOfficer','AdminOfficer'], {}) %>
